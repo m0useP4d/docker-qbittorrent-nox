@@ -58,9 +58,9 @@ COPY entrypoint.sh /entrypoint.sh
 
 RUN apk add --no-cache qt5-qtbase shadow
 
-ENV WEBUI_PORT="8080" CHUID=1000 CHGID=1000
+ENV WEBUI_PORT="8088" CHUID=1026 CHGID=100
 
-EXPOSE 6881 6881/udp 8080
+EXPOSE 6881 6881/udp 8088
 
 VOLUME /config /downloads
 
