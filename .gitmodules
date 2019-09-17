@@ -4,3 +4,9 @@
 [submodule "libtorrent-rasterbar"]
 	path = libtorrent-rasterbar
 	url = https://github.com/arvidn/libtorrent/
+[submodule "qBittorrent"]
+	path = qBittorrent
+	url = https://github.com/qbittorrent/qBittorrent.git
+[submodule "libtorrent"]
+	path = libtorrent
+	url = https://github.com/arvidn/libtorrent.git
