@@ -1,19 +1,3 @@
-FROM lsiobase/alpine:3.7 as builder
-
-RUN apk add --no-cache --virtual=build-dependencies \
-	autoconf \
-	automake \
-	boost-dev \
-	cmake \
-	curl \
-	file \
-	g++ \
-	geoip-dev \
-	go \
-	git \
-	libtool \
-	make
-  
 FROM alpine:latest AS builder
 
 COPY libtorrent-rasterbar libtorrent-rasterbar
@@ -45,7 +29,7 @@ RUN apk add --no-cache qt5-qtbase shadow
 
 ENV WEBUI_PORT="8080" CHUID=1026 CHGID=100
 
-EXPOSE 6881 6881/udp 8088
+EXPOSE 6881 6881/udp 8080
 
 VOLUME /config /downloads
 
