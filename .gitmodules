@@ -1,6 +1,12 @@
 [submodule "qbittorrent"]
 	path = qbittorrent
-	url = https://github.com/qbittorrent/qBittorrent
+	url = https://github.com/qbittorrent/qBittorrent.git
 [submodule "libtorrent-rasterbar"]
 	path = libtorrent-rasterbar
-	url = https://github.com/arvidn/libtorrent/
+	url = https://github.com/arvidn/libtorrent.git
+[submodule "qBittorrent"]
+	path = qBittorrent
+	url = https://github.com/qbittorrent/qBittorrent.git
+[submodule "libtorrent"]
+	path = libtorrent
+	url = https://github.com/arvidn/libtorrent.git
