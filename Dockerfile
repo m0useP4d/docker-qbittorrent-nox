@@ -13,18 +13,7 @@ RUN apk add --no-cache --virtual=build-dependencies \
 	git \
 	libtool \
 	make
-
-COPY Reflection /usr/lib/go/src/github.com/h31/Reflection
-
-RUN	cd /usr/lib/go/src/github.com/h31/Reflection/; \
-	go get .; \
-	go build -o main -ldflags '-extldflags "-static"' .; \
-	mv main /tmp/; \
-	cd /tmp; \
-	rm -rf /usr/lib/go/src/github.com/h31/Reflection/; \
-	apk del --purge \
-	build-dependencies
-    
+  
 FROM alpine:latest AS builder
 
 COPY libtorrent-rasterbar libtorrent-rasterbar
@@ -50,15 +39,11 @@ COPY --from=builder /usr/local/lib/libtorrent-rasterbar.so.1.2.2 /usr/lib/libtor
 
 COPY --from=builder /usr/local/bin/qbittorrent-nox /usr/bin/qbittorrent-nox
 
-COPY services.d /etc/services.d
-COPY --from=builder /tmp/main /tmp/main
-RUN chmod +x /tmp/main
-
 COPY entrypoint.sh /entrypoint.sh
 
 RUN apk add --no-cache qt5-qtbase shadow
 
-ENV WEBUI_PORT="8088" CHUID=1026 CHGID=100
+ENV WEBUI_PORT="8080" CHUID=1026 CHGID=100
 
 EXPOSE 6881 6881/udp 8088
 
