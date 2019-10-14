@@ -7,7 +7,7 @@ RUN cd libtorrent-rasterbar && \
     cmake -DCMAKE_INSTALL_LIBDIR=lib . && \
     make -j`nproc` && \
     make install && \
-    strip /usr/local/lib/libtorrent-rasterbar.so.1.2.2
+    strip /usr/local/lib/libtorrent-rasterbar.so.2.0.0
 
 COPY qbittorrent qbittorrent
 
