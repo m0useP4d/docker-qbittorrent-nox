@@ -1,6 +1,8 @@
 # qbittorrent-nox
 
-Very minimal qbittorrent-nox image build from latest git master branch.
+Very minimal qbittorrent-nox image build from latest git master branch, forked from caoli5288
+
+check your UID and GID in synology and keyin correctly.
 
 ## Usage
 
