@@ -1,5 +1,10 @@
 #!/bin/sh
 
+cp /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+echo "Set Timezone to Berlin"
+now=$(date)
+echo "Current date: $now"
+
 if ! id qbittorrent; then
     echo "[WARNING] User not found. Maybe first bootstrap?"
     echo "[INFO] Try to create user qbittorrent."
