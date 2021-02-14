@@ -5,3 +5,4 @@
 [submodule "libtorrent-rasterbar"]
 	path = libtorrent-rasterbar
 	url = https://github.com/arvidn/libtorrent.git
+	branch = RC_1_2
